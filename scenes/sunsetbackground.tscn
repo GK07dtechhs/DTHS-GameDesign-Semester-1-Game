@@ -1,0 +1,142 @@
+[gd_scene load_steps=7 format=3 uid="uid://5d10ejhybbmh"]
+
+[ext_resource type="Texture2D" uid="uid://b8plovdk4wn21" path="res://assets/sprites/Image_20251212_113251_640.png" id="1_t7rws"]
+[ext_resource type="Texture2D" uid="uid://by547mvw36u5d" path="res://assets/sprites/Image_20251212_113251_619.png" id="2_07hnj"]
+[ext_resource type="Texture2D" uid="uid://mmxglbw7o17x" path="res://assets/sprites/Image_20251212_113251_626.png" id="3_abfnu"]
+[ext_resource type="Texture2D" uid="uid://4t5lq8041f18" path="res://assets/sprites/Image_20251212_113251_652.png" id="4_jgrcr"]
+[ext_resource type="Texture2D" uid="uid://bypj8osfsb75i" path="res://assets/sprites/Image_20251212_113251_662.png" id="5_q52u7"]
+[ext_resource type="Texture2D" uid="uid://byuwwt4asr53r" path="res://assets/sprites/Image_20251212_113251_662 - Copy.png" id="6_12e4h"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="FrontHillsLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 140.0
+offset_top = 60.0
+offset_right = 200.0
+offset_bottom = 99.0
+scale = Vector2(0.287348, 0.287348)
+
+[node name="Parallax2D" type="Parallax2D" parent="FrontHillsLayer"]
+z_index = -3
+scroll_scale = Vector2(0.3, 1.1)
+scroll_offset = Vector2(2, 84)
+
+[node name="TextureRect" type="TextureRect" parent="FrontHillsLayer/Parallax2D"]
+offset_left = 274.0
+offset_top = -326.0
+offset_right = 15099.0
+offset_bottom = 74.0
+texture = ExtResource("1_t7rws")
+stretch_mode = 1
+
+[node name="BackHillsLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 50.0
+scale = Vector2(0.561511, 0.561511)
+
+[node name="Parallax2D2" type="Parallax2D" parent="BackHillsLayer"]
+z_index = -4
+scroll_scale = Vector2(0.1, 1.2)
+scroll_offset = Vector2(2, 84)
+
+[node name="TextureRect" type="TextureRect" parent="BackHillsLayer/Parallax2D2"]
+offset_left = 268.0
+offset_top = -300.0
+offset_right = 11093.0
+offset_bottom = 100.0
+texture = ExtResource("2_07hnj")
+stretch_mode = 1
+
+[node name="StructureLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 121.0
+offset_top = 14.0
+offset_right = 161.0
+offset_bottom = 54.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Parallax2D3" type="Parallax2D" parent="StructureLayer"]
+z_index = -5
+scroll_scale = Vector2(-0.6, 1)
+scroll_offset = Vector2(2, 84)
+
+[node name="TextureRect" type="TextureRect" parent="StructureLayer/Parallax2D3"]
+offset_left = 287.0
+offset_top = -200.0
+offset_right = 14787.0
+offset_bottom = 200.0
+texture = ExtResource("3_abfnu")
+stretch_mode = 1
+
+[node name="CloudsLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 200.0
+offset_top = 3.0
+offset_right = 240.0
+offset_bottom = 43.0
+scale = Vector2(0.3, 0.3)
+
+[node name="Parallax2D4" type="Parallax2D" parent="CloudsLayer"]
+z_index = -6
+scroll_scale = Vector2(-2, 1)
+scroll_offset = Vector2(5.33331, 84)
+
+[node name="TextureRect" type="TextureRect" parent="CloudsLayer/Parallax2D4"]
+offset_left = 294.0
+offset_top = -257.0
+offset_right = 25294.0
+offset_bottom = 143.0
+texture = ExtResource("4_jgrcr")
+stretch_mode = 1
+
+[node name="SkyLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -42.0
+offset_top = 79.0
+offset_right = -2.0
+offset_bottom = 119.0
+
+[node name="Parallax2D5" type="Parallax2D" parent="SkyLayer"]
+z_index = -7
+texture_repeat = 2
+scroll_scale = Vector2(0.09, 0)
+scroll_offset = Vector2(5.333, 84)
+
+[node name="TextureRect" type="TextureRect" parent="SkyLayer/Parallax2D5"]
+offset_left = 281.667
+offset_top = 55.0
+offset_right = 7106.667
+offset_bottom = 455.0
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("5_q52u7")
+stretch_mode = 1
+
+[node name="CloudsColorLayer" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -44.0
+offset_top = 214.0
+offset_right = -4.0
+offset_bottom = 254.0
+
+[node name="Parallax2D5" type="Parallax2D" parent="CloudsColorLayer"]
+z_index = -7
+scroll_offset = Vector2(2, 84)
+
+[node name="TextureRect" type="TextureRect" parent="CloudsColorLayer/Parallax2D5"]
+offset_left = 297.0
+offset_top = -251.0
+offset_right = 7122.0
+offset_bottom = 149.0
+texture = ExtResource("6_12e4h")
+stretch_mode = 1
